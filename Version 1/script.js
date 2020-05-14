@@ -24,13 +24,30 @@ let appData = {
 
 let dailyBudget = (money + mandatoryExpenseCost) / 30;
 
-alert("Ваш дневной бюджет: " + dailyBudget);
+alert("Ваш дневной бюджет: " + dailyBudget + " рублей.");
 
 console.log(mandatoryExpenseCost);
-console.log(typeof(mandatoryExpenseCost));
 console.log(appData.moneyData);
 console.log(appData.timeData);
 console.log(mandatoryExpense == true);
-console.log(typeof(expenses));
-console.log(typeof(optionalExpenses));
 console.log(appData);
+
+// let num = 50;
+
+// while (num < 55) {
+//     console.log(num);
+//     alert('Маловато!');
+//     num++;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// } while (num < 55);
+
+// for (num; num < 56; num++) {
+//     if (num == 54) {
+//         continue
+//     }
+//     console.log(num);
+// };
