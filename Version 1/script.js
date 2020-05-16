@@ -1,53 +1,21 @@
-let money = +prompt('Ваш бюджет на месяц?', ['В рублях']);
-let time = prompt('Введите дату в формате YYYY-DD-MM', ['2020-13-05']);
-let mandatoryExpense = prompt('Введите обязательную статью расходов на этот месяц');
-
-if (mandatoryExpense != false) {
-    var mandatoryExpenseCost = + prompt("Сколько это будет стоить?");
-} else {
-    alert("Вы не указали статью расходов");
-};
-
-let expenses = new Object();
-let optionalExpenses = new Array();
-let income = new Array();
-let savings = false;
+let money = +prompt('Ваш бюджет на месяц?');
+    time = prompt('Введите дату в формате YYYY-DD-MM');
 
 let appData = {
-    moneyData: money,
+    budget: money,
+    expenses: {},
+    optionalExpenses: {},
+    income: [],
     timeData: time,
-    expenses,
-    optionalExpenses,
-    income,
-    savings,
+    savings: false,
 };
 
-let dailyBudget = (money + mandatoryExpenseCost) / 30;
+let a1 = prompt('Введите обязательную статью расходов в этом месяце', ''),
+    a2 = prompt('Во сколько это обойдется?', ''),
+    a3 = prompt('Введите обязательную статью расходов в этом месяце', ''),
+    a4 = prompt('Во сколько это обойдется?', '');
 
-alert("Ваш дневной бюджет: " + dailyBudget + " рублей.");
+appData.expenses.a1 = a2;
+appData.expenses.a3 = a4;
 
-console.log(mandatoryExpenseCost);
-console.log(appData.moneyData);
-console.log(appData.timeData);
-console.log(mandatoryExpense == true);
-console.log(appData);
-
-// let num = 50;
-
-// while (num < 55) {
-//     console.log(num);
-//     alert('Маловато!');
-//     num++;
-// }
-
-// do {
-//     console.log(num);
-//     num++;
-// } while (num < 55);
-
-// for (num; num < 56; num++) {
-//     if (num == 54) {
-//         continue
-//     }
-//     console.log(num);
-// };
+alert(appData.budget / 30);
